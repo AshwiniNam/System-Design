@@ -29,6 +29,15 @@ public class Main {
             System.out.print(val+"->");
         }
         System.out.println(".");
+
+        //The above for loop is a syntactical sugar
+        //The following code is executed internally
+        
+        // Iterator<Integer> itr = list.iterator();
+        // while(itr.hasNext()==true)
+        // {
+        //     int val = itr.next();
+        // }
     }
     static class MyLinkedList implements Iterable<Integer>
     {
