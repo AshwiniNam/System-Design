@@ -77,20 +77,35 @@ public class Main {
         {
             //the return type of this function is Iterator, so we need to include a new class which implements
             // iterator interface as well
+            return new LinkedListIterator(head);
+            //the head we are passing goes to LinkedListIterator's constructor
         }
     }
 
     static class LinkedListIterator implements Iterator<Integer>
     {
         //this class should define hasnext and next function as it implements Iterator
+
+        //constructor
+        Node temp;
+        LinkedListIterator(Node temp)
+        {
+            this.temp = temp;
+        }
         public boolean hasNext()
         {
-
+            if(temp == null)
+                return false;
+            else
+                return true;
         }
 
         public Integer next()
         {
-            
+            int rv= temp.data;
+            //move temp forward
+            temp = temp.next;
+            return rv;
         }
     }
 }
