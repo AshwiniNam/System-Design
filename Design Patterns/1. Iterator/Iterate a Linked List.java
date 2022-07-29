@@ -32,7 +32,7 @@ public class Main {
 
         //The above for loop is a syntactical sugar
         //The following code is executed internally
-        
+
         // Iterator<Integer> itr = list.iterator();
         // while(itr.hasNext()==true)
         // {
@@ -75,7 +75,22 @@ public class Main {
 
         public Iterator<Integer> iterator()
         {
-            //the return type of this function is Iterator, so we need to include that interface as well
+            //the return type of this function is Iterator, so we need to include a new class which implements
+            // iterator interface as well
+        }
+    }
+
+    static class LinkedListIterator implements Iterator<Integer>
+    {
+        //this class should define hasnext and next function as it implements Iterator
+        public boolean hasNext()
+        {
+
+        }
+
+        public Integer next()
+        {
+            
         }
     }
 }
